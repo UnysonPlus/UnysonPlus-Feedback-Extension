@@ -1,17 +1,29 @@
-<?php if ( ! defined( 'FW' ) ) {
-	die( 'Forbidden' );
-}
+<?php if (!defined('FW')) die('Forbidden');
 
 $manifest = array();
 
-$manifest['name']        = __( 'FeedBack', 'fw' );
-$manifest['description'] = __( 'Adds the possibility to leave feedback (comments, reviews and rating) about your products, articles, etc. This replaces the default comments system.', 'fw' );
-$manifest['version'] = '1.0.13';
-$manifest['display'] = true;
-$manifest['standalone'] = true;
-$manifest['github_repo'] = 'https://github.com/ThemeFuse/Unyson-Feedback-Extension';
-$manifest['uri'] = 'http://manual.unyson.io/en/latest/extension/feedback/index.html#content';
-$manifest['author'] = 'ThemeFuse';
-$manifest['author_uri'] = 'http://themefuse.com/';
+$manifest['name']        = __( 'Feedback', 'fw' );
+$manifest['slug']        = 'unysonplus-feedback';
+$manifest['description'] = __( 
+	'Adds the possibility to leave feedback (comments, reviews and rating) about your products, articles, etc. This replaces the default comments system.', 
+	'fw' 
+);
 
-$manifest['github_update'] = 'ThemeFuse/Unyson-Feedback-Extension';
+$manifest['version']     = '1.0.13';
+$manifest['display']     = true;
+$manifest['standalone']  = true;
+
+// Repository Info
+$manifest['github_update'] = 'UnysonPlus/UnysonPlus-Feedback-Extension';
+$manifest['github_repo']   = 'https://github.com/UnysonPlus/UnysonPlus-Feedback-Extension';
+$manifest['github_branch'] = 'master';
+
+// Author Info
+$manifest['author']     = 'UnysonPlus';
+$manifest['author_uri'] = 'https://www.lastimosa.com.ph/unysonplus';
+
+// Meta
+$manifest['license']      = 'GPL-2.0-or-later';
+$manifest['text_domain']  = 'fw';
+$manifest['requires_php'] = '7.4';
+$manifest['requires_wp']  = '5.8';
